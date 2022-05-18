@@ -7,5 +7,5 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TovarRepository extends JpaRepository<Tovar, Long> {
-//    Page<Tovar> findByNameLikeIgnoreCase(String pattern, Pageable pageable);
+    Page<Tovar> findByNameContainsIgnoreCase(String pattern, Pageable pageable);
 }
