@@ -30,6 +30,7 @@ public class TovarController {
     public String getSearch(Model model, @RequestParam String pattern, Pageable pageable){
         Page<Tovar> tovars = tovarRepository.findByNameContainsIgnoreCase(pattern, pageable);
         model.addAttribute("tovars", tovars.getContent());
+        model.addAttribute("pattern", pattern);
         return "tovar";
     }
 }
