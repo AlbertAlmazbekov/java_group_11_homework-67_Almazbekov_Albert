@@ -7,5 +7,8 @@
     <div>${tovar}</div>
 </#list>
 
-<a href="http://localhost:8011/tovar/search?pattern=sdfs?page=0&size=3">1</a>
-<a href="http://localhost:8011/tovar/search?pattern=sdfs?page=1&size=3">2</a>
+<#if tovars?has_content>
+
+    <a href="http://localhost:8011/tovar/search?pattern=${pattern}&page=0&size=3">1</a>
+
+</#if>
